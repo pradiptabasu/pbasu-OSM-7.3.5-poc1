@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderItemSpec" name="COM_OrderItemSpecification">
+  <com:displayName>COM_OrderItemSpecification</com:displayName>
+  <com:saveVersion>19</com:saveVersion>
+  <com:id>crraK3cgSiKymQkvxRvHcw</com:id>
+  <namespace>testComProject.com</namespace>
+  <useComplexDataType>false</useComplexDataType>
+  <extendAbstractOrderItemType>false</extendAbstractOrderItemType>
+  <productSpecMappingProperty>
+    <com:entity>COM_OrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderItemSpec.requestedDeliveryDateProperty</com:relationship>
+    <com:element>ProductSpec</com:element>
+    <com:elementType>oracle.communications.sce.osm.orchestration.orderItemSpec.property</com:elementType>
+    <com:elementName>ProductSpec</com:elementName>
+  </productSpecMappingProperty>
+  <requestedDeliveryDateMappingProperty>
+    <com:entity>COM_OrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderItemSpec.requestedDeliveryDateProperty</com:relationship>
+    <com:element>RequestedDeliveryDateTime</com:element>
+    <com:elementType>oracle.communications.sce.osm.orchestration.orderItemSpec.property</com:elementType>
+  </requestedDeliveryDateMappingProperty>
+  <itemNameProperty>
+    <com:entity>COM_OrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderItemSpec.itemNameProperty</com:relationship>
+    <com:element>ProductName</com:element>
+    <com:elementType>oracle.communications.sce.osm.orchestration.orderItemSpec.property</com:elementType>
+    <com:elementName>ProductName</com:elementName>
+  </itemNameProperty>
+  <property name="ProductCode">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:productCode/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="ProductName">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:productName/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="ProductDesc">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:productDesc/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="ProductClass">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:class/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="ProductSpec">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:externalInstance xsi:type="osm:dataProviderRuleType" enabled="true" final="false" override="false">
+        <osm:description>ProductSpecMappingFileDataInstance</osm:description>
+        <osm:dataProvider inline="false" lang="">
+          <osm:dataProvider>
+            <com:entity>ProductSpecMap</com:entity>
+            <com:entityType>dataProvider</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.entities.viewrules.dataProviderRef</com:relationship>
+          </osm:dataProvider>
+          <osm:paramter name="oms:url" useDefault="true">
+            <osm:binding>'D:\\Oracle\\domains_FMW_1213\\osm_73\\productSpecMapping\\productSpecMapping.xml'</osm:binding>
+          </osm:paramter>
+        </osm:dataProvider>
+      </osm:externalInstance>
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+let $productSpecMap := vf:instance('ProductSpecMappingFileDataInstance')&#xD;
+let $productClassName := fn:normalize-space(osm7dd:class/text())&#xD;
+return&#xD;
+fn:normalize-space($productSpecMap/productSpec[fn:lower-case(@&#xD;
+name)=fn:lower-case($productClassName)]/fulfillmentPattern/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="LineID">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:lineID/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="BundleID">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:BundleID/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="RequestedDeliveryDateTime">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:RequestedDeliveryDateTime/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="LineItemPayload">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+.</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="ParentLineID">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:parentLineID/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <property name="RootParentLineID">
+    <nodesetExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+fn:normalize-space(osm7dd:rootParentLineID/text())</osm:xquery>
+    </nodesetExpression>
+  </property>
+  <orderTemplateContribution/>
+</com:modelEntity>

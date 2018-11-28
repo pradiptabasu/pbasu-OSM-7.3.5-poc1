@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:proc="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="proc:processType" name="TestSOMProcess" workstream="false">
+  <com:displayName>TestSOMProcess</com:displayName>
+  <com:saveVersion>14</com:saveVersion>
+  <com:id>PqvOZoSnQXqHP8gHtaCXuA</com:id>
+  <proc:orderType>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>orderRef</com:relationship>
+  </proc:orderType>
+  <proc:expectedDuration>P0Y0M0DT0H0M86400S</proc:expectedDuration>
+  <proc:startTask>Start1</proc:startTask>
+  <proc:activity id="Start1" name="Start">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>77.0</proc:Xcoordinate>
+      <proc:Ycoordinate>542.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task1" name="SelectFlowTask">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>77.0</proc:Xcoordinate>
+      <proc:Ycoordinate>210.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>SelectFlowTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:ruleTaskType" id="Gateway3" name="Check_If_DBPlugin">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>249.0</proc:Xcoordinate>
+      <proc:Ycoordinate>224.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:ruleRef>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.ruleTask.rule</com:relationship>
+      <com:element>Check_If_DBPlugin</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+    </proc:ruleRef>
+  </proc:activity>
+  <proc:activity xsi:type="proc:ruleTaskType" id="Gateway5" name="Check_If_XSLT">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>466.0</proc:Xcoordinate>
+      <proc:Ycoordinate>226.00002</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:ruleRef>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.ruleTask.rule</com:relationship>
+      <com:element>Check_If_XSLT</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+    </proc:ruleRef>
+  </proc:activity>
+  <proc:activity xsi:type="proc:ruleTaskType" id="Gateway6" name="Check_If_XQUERY">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>709.0</proc:Xcoordinate>
+      <proc:Ycoordinate>228.00002</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:ruleRef>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.ruleTask.rule</com:relationship>
+      <com:element>Check_If_XQUERY</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+    </proc:ruleRef>
+  </proc:activity>
+  <proc:activity xsi:type="proc:subprocessTaskType" id="SubProcess7" name="DatabasePluginSubProcess">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>246.0</proc:Xcoordinate>
+      <proc:Ycoordinate>478.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:subprocess id="SubprocessEntry10">
+      <proc:ruleRef>
+        <com:entity>TestSOMOrder</com:entity>
+        <com:entityType>order</com:entityType>
+        <com:relationship>com.mslv.studio.provisioning.order.subprocess.rule</com:relationship>
+        <com:element>null_rule</com:element>
+        <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+      </proc:ruleRef>
+      <proc:processRef>
+        <com:entity>DatabasePluginSubProcess</com:entity>
+        <com:entityType>process</com:entityType>
+        <com:relationship>processRef</com:relationship>
+      </proc:processRef>
+    </proc:subprocess>
+  </proc:activity>
+  <proc:activity xsi:type="proc:subprocessTaskType" id="SubProcess8" name="XSLTAutomationsSubProcess">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>467.0</proc:Xcoordinate>
+      <proc:Ycoordinate>484.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:subprocess id="SubprocessEntry17">
+      <proc:ruleRef>
+        <com:entity>TestSOMOrder</com:entity>
+        <com:entityType>order</com:entityType>
+        <com:relationship>com.mslv.studio.provisioning.order.subprocess.rule</com:relationship>
+        <com:element>null_rule</com:element>
+        <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+      </proc:ruleRef>
+      <proc:processRef>
+        <com:entity>XSLTAutomationsSubProcess</com:entity>
+        <com:entityType>process</com:entityType>
+        <com:relationship>processRef</com:relationship>
+      </proc:processRef>
+    </proc:subprocess>
+  </proc:activity>
+  <proc:activity xsi:type="proc:subprocessTaskType" id="SubProcess9" name="XQueryAutomationsSubProcess">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>709.0</proc:Xcoordinate>
+      <proc:Ycoordinate>486.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:subprocess id="SubprocessEntry18">
+      <proc:ruleRef>
+        <com:entity>TestSOMOrder</com:entity>
+        <com:entityType>order</com:entityType>
+        <com:relationship>com.mslv.studio.provisioning.order.subprocess.rule</com:relationship>
+        <com:element>null_rule</com:element>
+        <com:elementType>com.mslv.studio.provisioning.order.rule</com:elementType>
+      </proc:ruleRef>
+      <proc:processRef>
+        <com:entity>XQueryAutomationsSubProcess</com:entity>
+        <com:entityType>process</com:entityType>
+        <com:relationship>processRef</com:relationship>
+      </proc:processRef>
+    </proc:subprocess>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="End14" name="End">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>466.0</proc:Xcoordinate>
+      <proc:Ycoordinate>757.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="End15" name="End">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>1041.0</proc:Xcoordinate>
+      <proc:Ycoordinate>223.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:transition id="Flow2" name="">
+    <proc:from>Start1</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow4" name="next">
+    <proc:from>Task1</proc:from>
+    <proc:to>Gateway3</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow11" name="true">
+    <proc:from>Gateway3</proc:from>
+    <proc:to>SubProcess7</proc:to>
+    <proc:status>true</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow12" name="false">
+    <proc:from>Gateway3</proc:from>
+    <proc:to>Gateway5</proc:to>
+    <proc:status>false</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow13" name="false">
+    <proc:from>Gateway6</proc:from>
+    <proc:to>End15</proc:to>
+    <proc:status>false</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow16" name="false">
+    <proc:from>Gateway5</proc:from>
+    <proc:to>Gateway6</proc:to>
+    <proc:status>false</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow19" name="true">
+    <proc:from>Gateway5</proc:from>
+    <proc:to>SubProcess8</proc:to>
+    <proc:status>true</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow20" name="true">
+    <proc:from>Gateway6</proc:from>
+    <proc:to>SubProcess9</proc:to>
+    <proc:status>true</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow21" name="">
+    <proc:from>SubProcess7</proc:from>
+    <proc:to>End14</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow22" name="">
+    <proc:from>SubProcess8</proc:from>
+    <proc:to>End14</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow23" name="">
+    <proc:from>SubProcess9</proc:from>
+    <proc:to>End14</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+</com:modelEntity>

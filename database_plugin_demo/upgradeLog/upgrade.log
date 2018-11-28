@@ -1,0 +1,93 @@
+
+[Info] (Apr 14, 2015 4:53:57 PM) Start to upgrade project database_plugin_demo
+[Info] (Apr 14, 2015 4:53:57 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:57 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:57 PM) Start to upgrade with participant oracle.communications.studio.osm.provisioning.project.upgrade.ProvisioningProjectUpgradeDefaultParticipant
+[Info] (Apr 14, 2015 4:53:57 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:57 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:57 PM) Start to upgrade with participant oracle.communications.studio.osm.provisioning.entities.view.upgrade.ViewUpgradeParticipant
+[Info] (Apr 14, 2015 4:53:57 PM) Found 8 models to upgrade
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\database_plugin_demo_web_creation.manualTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\display_employee_jobs.manualTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\display_employee_names.manualTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\get_employee_names.automationTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\get_employee_names__sp_.automationTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\get_second_employee_s_job_sp.automationTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\get_third_employee_s_job.automationTask
+[Info] (Apr 14, 2015 4:53:57 PM) Start upgrading task file D:\eclipse_workspaces\studio_730\database_plugin_demo\model\handle_automation_exception.manualTask
+[Info] (Apr 14, 2015 4:53:57 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:57 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:57 PM) Start to upgrade with participant oracle.communications.sce.osm.provisioning.upgrade.ProvisioningProjectUpgradeDefaultParticipant
+[Info] (Apr 14, 2015 4:53:57 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:57 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:57 PM) Start to upgrade with participant com.mslv.studio.provisioning.entities.order.upgrade.OrderModelUpgradeParticipant
+[Info] (Apr 14, 2015 4:53:57 PM) Processing order model file: D:\eclipse_workspaces\studio_730\database_plugin_demo\model\database_plugin_demo_web.order
+[Info] (Apr 14, 2015 4:53:57 PM) Starting migration of columns (aka Flex Headers)...
+[Info] (Apr 14, 2015 4:53:57 PM) Finished migrating columns
+[Info] (Apr 14, 2015 4:53:57 PM) Migrating Fallouts...
+[Info] (Apr 14, 2015 4:53:57 PM) Finished migrating Fallouts
+[Info] (Apr 14, 2015 4:53:57 PM) Migrating Data Change Notifications...
+[Info] (Apr 14, 2015 4:53:57 PM) Finished migrating Data Change Notifications
+[Info] (Apr 14, 2015 4:53:57 PM) Finished processing order model file: D:\eclipse_workspaces\studio_730\database_plugin_demo\model\database_plugin_demo_web.order
+[Info] (Apr 14, 2015 4:53:58 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:58 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:58 PM) Start to upgrade with participant oracle.communications.sce.integration.activation.task.upgrade.ActivationTaskUpgradeParticipant
+[Info] (Apr 14, 2015 4:53:58 PM) Update to file D:\eclipse_workspaces\studio_730\database_plugin_demo\dataDictionary\database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:58 PM) Update element names from descriptiont to description
+[Info] (Apr 14, 2015 4:53:58 PM) Start to upgrade with participant oracle.communications.sce.osm.orchestration.entities.orderItemSpec.upgrade.OrderItemSpecUpgradeParticipant
+[Info] (Apr 14, 2015 4:53:58 PM) Start to upgrade with participant oracle.communications.studio.model.provisioning.entity.upgradeParticipant
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  database_plugin_demo.osmCartridge
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  database_plugin_demo.osmCartridge
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  handle_automation_exception.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  handle_automation_exception.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  get_third_employee_s_job.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  get_third_employee_s_job.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  get_second_employee_s_job_sp.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  get_second_employee_s_job_sp.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  get_employee_names__sp_.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  get_employee_names__sp_.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  get_employee_names.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  get_employee_names.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  display_employee_names.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  display_employee_names.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  display_employee_jobs.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  display_employee_jobs.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  demo_process.process
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  demo_process.process
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  demo.rolePermissions
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  demo.rolePermissions
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  default.orderPolicy
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  default.orderPolicy
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  database_plugin_demo_web_creation.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  database_plugin_demo_web_creation.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  database_plugin_demo_web.order
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  database_plugin_demo_web.order
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  DatabasePlugin3.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  DatabasePlugin3.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  DatabasePlugin2.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  DatabasePlugin2.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  DatabasePlugin1.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  DatabasePlugin1.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  DatabasePlugin.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  DatabasePlugin.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Element Reference Name for  database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity DatabasePlugin.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity display_employee_names.manualTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity DatabasePlugin1.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity get_employee_names.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity demo.rolePermissions
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity database_plugin_demo.osmCartridge
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity get_second_employee_s_job_sp.automationTask
+[Info] (Apr 14, 2015 4:53:58 PM) [Entity ID Upgrade] Saved Entity database_plugin_demo_companion.xsdc
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity handle_automation_exception.manualTask
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity demo_process.process
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity get_employee_names__sp_.automationTask
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity display_employee_jobs.manualTask
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity DatabasePlugin3.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity get_third_employee_s_job.automationTask
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity database_plugin_demo_web.order
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity DatabasePlugin2.customAutomationPlugin
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity database_plugin_demo_web_creation.manualTask
+[Info] (Apr 14, 2015 4:53:59 PM) [Entity ID Upgrade] Saved Entity default.orderPolicy
+[Info] (Apr 14, 2015 4:53:59 PM) Start to upgrade with participant oracle.communications.sce.integration.activation.task.upgrade.ActivationTaskPostUpgradeParticipant

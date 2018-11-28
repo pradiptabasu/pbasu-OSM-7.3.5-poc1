@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo">
+    <xs:simpleType name="text_field_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="name_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:complexType name="data_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence/>
+  </xs:complexType>
+    <xs:simpleType name="job_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="number_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal"/>
+  </xs:simpleType>
+    <xs:simpleType name="boolean_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:boolean"/>
+  </xs:simpleType>
+    <xs:complexType name="notice_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence/>
+  </xs:complexType>
+    <xs:complexType name="employee_ddBaseType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence/>
+  </xs:complexType>
+    <xs:complexType name="employee">
+    <xs:complexContent>
+      <xs:extension base="tns:employee_ddBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name">
+            <xs:simpleType>
+              <xs:restriction base="tns:name_ddBaseType"/>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="job">
+            <xs:simpleType>
+              <xs:restriction base="tns:job_ddBaseType"/>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="notice">
+    <xs:complexContent>
+      <xs:extension base="tns:notice_ddBaseType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="data">
+    <xs:complexContent>
+      <xs:extension base="tns:data_ddBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="boolean">
+            <xs:simpleType>
+              <xs:restriction base="tns:boolean_ddBaseType"/>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="number">
+            <xs:simpleType>
+              <xs:restriction base="tns:number_ddBaseType"/>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="text_field">
+            <xs:simpleType>
+              <xs:restriction base="tns:text_field_ddBaseType"/>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

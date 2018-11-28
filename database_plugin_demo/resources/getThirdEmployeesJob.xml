@@ -1,0 +1,13 @@
+<implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+	<transaction isolationLevel="READ_COMMITTED">
+		<dataSource>jdbc/testDataSource</dataSource>
+		<query maxRows="1">
+			<sql>SELECT job FROM employee WHERE name = ?</sql>
+			<bindPath id="emp" path="/employee[3]"/>
+			<parameter xsi:type="ProvisioningParameterType" bindPathRef="emp" path="name" type="text"/>
+			<resultSet appliesTo="1" appliesToRow="all">
+				<column number="1" bindPathRef="emp" path="job" updateOnMatch="true"/>
+			</resultSet>
+		</query>
+	</transaction>
+</implementation>

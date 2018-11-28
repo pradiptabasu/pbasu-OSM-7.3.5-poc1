@@ -1,0 +1,37 @@
+<ord:CreateOrder xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement" >
+    <osm7dd:servicesOrder xmlns:osm7dd="http://www.example.org/osm7Order1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <osm7dd:orderId>orderId-1000</osm7dd:orderId>
+
+        <!-- BROADBAND / IPTV BUNDLE - BUNDLE -->
+        <osm7dd:salesOrderLine>
+            <osm7dd:lineId>1</osm7dd:lineId>
+            <osm7dd:requestedDeliveryDate>2001-12-31T12:00:00</osm7dd:requestedDeliveryDate>
+
+            <osm7dd:itemReference>
+                <osm7dd:productName>Broadband and IPTV Bundle</osm7dd:productName>
+                <osm7dd:productType>BUNDLE</osm7dd:productType>
+            </osm7dd:itemReference>
+        </osm7dd:salesOrderLine>
+        
+       
+      
+        <!-- IPTV Gold Movies and Sports -->
+        <osm7dd:salesOrderLine>
+            <osm7dd:lineId>30</osm7dd:lineId>
+            <osm7dd:requestedDeliveryDate>2001-12-31T12:00:00</osm7dd:requestedDeliveryDate>
+            
+            <osm7dd:parentLineReference>
+                <osm7dd:parentLineId>1</osm7dd:parentLineId>
+            </osm7dd:parentLineReference>
+          
+            <osm7dd:itemReference>
+                <osm7dd:productName>Gold Movies and Sport</osm7dd:productName>
+                <osm7dd:productDesc>Gold Movies and Sports package</osm7dd:productDesc>
+                <osm7dd:productType>PRODUCT</osm7dd:productType>
+                <osm7dd:productCode>IPTV1</osm7dd:productCode>
+                <osm7dd:class>IPTV</osm7dd:class>                
+            </osm7dd:itemReference>
+        </osm7dd:salesOrderLine>
+
+    </osm7dd:servicesOrder>
+</ord:CreateOrder>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:manualTaskType" name="DatabasePluginInputTask">
+  <com:displayName>InputToDatabasePluginTask</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
+  <com:id>qXosqwewTni9xoETvThNiw</com:id>
+  <task:orderType>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.orderType</com:relationship>
+  </task:orderType>
+  <task:orderTemplateRef>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>ora.task.orderTemplateRef</com:relationship>
+    <com:element>/Employee</com:element>
+    <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    <task:childNode>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/Employee/empid</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
+    <task:childNode>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/Employee/empname</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
+  </task:orderTemplateRef>
+  <task:viewNodeExtension>
+    <task:path>/Employee</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/Employee/empid</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/Employee/empname</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:state name="accepted">
+    <task:displayName>Accepted</task:displayName>
+  </task:state>
+  <task:state name="completed">
+    <task:displayName>Completed</task:displayName>
+  </task:state>
+  <task:state name="received">
+    <task:displayName>Received</task:displayName>
+  </task:state>
+  <task:state name="assigned">
+    <task:displayName>Assigned</task:displayName>
+  </task:state>
+  <task:status name="next">
+    <task:displayName>Next</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:abstract>false</task:abstract>
+  <task:final>false</task:final>
+  <task:expectedDuration>P0Y0M0DT0H0M86400S</task:expectedDuration>
+  <task:responsible>System</task:responsible>
+  <task:scheduleType>SYSTEM</task:scheduleType>
+  <task:workgroupPermission>
+    <com:entity>TestSOMRole1</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do redo undo</task:executionModes>
+  </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
+</com:modelEntity>

@@ -1,0 +1,61 @@
+<!-- 
+	 <osm7dd:RequestedDeliveryDateTime>2016-02-02T13:02:36</osm7dd:RequestedDeliveryDateTime>
+	 	Format accepted is : 
+	 		yyyy-dd-mmThh:mm:ss		:		OSM processes this 24hr format in currrent timezone i.e. the timezone configured for OSM.
+	 				2016-02-02T13:02:36  ====> 02/02/2016 01:02:36 PM   server on which tested ws running on IST i.e. GMT + 5Hr30Mins
+	 				
+	 		yyyy-dd-mmThh:mm:ssZ	:		OSM processes this 24hr format in as provided dateTime + (GMT - current timezone offset). 
+	 				2016-02-02T13:02:36Z ====> 02/02/2016 06:32:36 PM   server on which tested ws running on IST i.e. GMT + 5Hr30Mins
+	 		
+	 Configuring Time Zone Settings
+		The oms_timezone parameter, in the om_parameter table of the database, must be set to the non-dst timezone. This setting must be defined in seconds 
+		offset to GMT for the time zone where your OSM database resides. For example, if you are setting this parameter for Eastern Standard Time (EST), use 
+		the value -18000 (60 seconds x 60 minutes = 3600 seconds–or one hour–x 5 for five hours offset from GMT). Time zones east of GMT use positive numbers, 
+		and time zones west of GMT use negative numbers.
+		This setting must be done to the OSM database/schema at creation time. The parameter is called "oms server tz offset seconds" in the Scripter. This value
+		is used by both the OSM database and OSM Administrator.	The database_timezone_offset, in the oms-config.xml file of the OSM server, must be set to be 
+		exactly	the same as the value set in 1. This value is used by the OSM server.      
+ -->
+<ord:CreateOrder xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement" >
+    <osm7dd:SalesOrder xmlns:osm7dd="http://www.example.org/osm7Order1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <osm7dd:orderId>orderId-1000</osm7dd:orderId>
+        <osm7dd:orderPriority>6</osm7dd:orderPriority>
+        <osm7dd:orderFulfillmentMode>DELIVER</osm7dd:orderFulfillmentMode>
+        <osm7dd:OrderLine>
+            <osm7dd:productName>MOTO-200</osm7dd:productName>
+            <osm7dd:productDesc>Motorola 200</osm7dd:productDesc>
+            <osm7dd:productCode>MOT200</osm7dd:productCode>
+            <osm7dd:class>Mobile</osm7dd:class>
+            <osm7dd:MobileNum>07760613421</osm7dd:MobileNum>
+            <osm7dd:lineID>1</osm7dd:lineID>
+            <osm7dd:parentLineID>1</osm7dd:parentLineID>
+            <osm7dd:rootParentLineID>1</osm7dd:rootParentLineID>
+            <osm7dd:BundleID>00</osm7dd:BundleID>
+            <osm7dd:RequestedDeliveryDateTime>2016-02-02T13:02:36</osm7dd:RequestedDeliveryDateTime>
+        </osm7dd:OrderLine>
+        <osm7dd:OrderLine>
+            <osm7dd:productName>SAMS-TOCO</osm7dd:productName>
+            <osm7dd:productDesc>Samsung Toco</osm7dd:productDesc>
+            <osm7dd:productCode>SAMTOC</osm7dd:productCode>
+            <osm7dd:class>Mobile</osm7dd:class>
+            <osm7dd:MobileNum>07760613422</osm7dd:MobileNum>
+            <osm7dd:lineID>2</osm7dd:lineID>
+            <osm7dd:parentLineID>2</osm7dd:parentLineID>
+            <osm7dd:rootParentLineID>2</osm7dd:rootParentLineID>
+            <osm7dd:BundleID>00</osm7dd:BundleID>
+            <osm7dd:RequestedDeliveryDateTime>2016-02-02T13:02:36</osm7dd:RequestedDeliveryDateTime>
+        </osm7dd:OrderLine>
+        <osm7dd:OrderLine>
+            <osm7dd:productName>Broadband</osm7dd:productName>
+            <osm7dd:productDesc>DSL 8mb</osm7dd:productDesc>
+            <osm7dd:productCode>ADSL8</osm7dd:productCode>
+            <osm7dd:class>DSL</osm7dd:class>
+            <osm7dd:staticIP>1.1.1.1</osm7dd:staticIP>
+            <osm7dd:lineID>3</osm7dd:lineID>
+            <osm7dd:parentLineID>3</osm7dd:parentLineID>
+            <osm7dd:rootParentLineID>3</osm7dd:rootParentLineID>
+            <osm7dd:BundleID>01</osm7dd:BundleID>
+            <osm7dd:RequestedDeliveryDateTime>2016-02-02T13:02:36</osm7dd:RequestedDeliveryDateTime>
+        </osm7dd:OrderLine>        
+    </osm7dd:SalesOrder>
+</ord:CreateOrder>

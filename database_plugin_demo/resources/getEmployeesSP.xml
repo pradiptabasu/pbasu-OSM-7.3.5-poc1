@@ -1,0 +1,10 @@
+<implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+	<update>
+		<dataSource>jdbc/testDataSource</dataSource>
+		<call>{call dbplugin_pkg.get_names(?)}</call>
+		<parameter xsi:type="CursorParameterType" type="Cursor" mode="out"/>
+		<resultSet appliesTo="1" appliesToRow="all">
+			<column number="1" path="/employee/name" updateOnMatch="false"/>
+		</resultSet>
+	</update>
+</implementation>

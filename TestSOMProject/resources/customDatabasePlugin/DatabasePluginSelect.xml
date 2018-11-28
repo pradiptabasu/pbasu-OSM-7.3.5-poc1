@@ -1,0 +1,44 @@
+<!-- <implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+	<query>
+		<dataSource>jdbc/testDataSource</dataSource>
+		<sql>SELECT empname FROM employeelist</sql>
+		<resultSet appliesTo="1" appliesToRow="all">
+			<column number="1" path="/Employee/empname"/>
+		</resultSet>
+		<sql>SELECT empname FROM employeelist WHERE empid = ?</sql>
+		<bindPath id="empid" path="/Employee/empid"/>
+		<bindPath id="empname" path="/Employee/empname"/>
+		<parameter xsi:type="ProvisioningParameterType" bindPathRef="empid" path="/Employee/empid" type="double"/>
+		<resultSet appliesTo="1" appliesToRow="all">
+			<column number="1" bindPathRef="empname" path="/Employee/empname" updateOnMatch="true"/>
+		</resultSet>
+	</query>
+</implementation>
+<implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+	<query>
+		<dataSource>jdbc/testDataSource</dataSource>
+		<sql>SELECT name FROM employee</sql>
+		<resultSet appliesTo="1" appliesToRow="all">
+			<column number="1" path="/Employee/empname"/>
+		</resultSet>
+	</query>
+</implementation> -->
+
+<implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+    <transaction>
+        <dataSource>jdbc/testDataSource</dataSource>
+        <query>
+            <sql>SELECT empname FROM employeelist WHERE empid = ?</sql>
+            <parameter xsi:type="ProvisioningParameterType" path="/Employee/empid" type="numeric"/>
+            <resultSet appliesTo="1" appliesToRow="all">
+                <column number="1" bindPathRef="employeelist" path="/Employee/empname"/>
+            </resultSet>
+        </query>
+    </transaction>
+</implementation>

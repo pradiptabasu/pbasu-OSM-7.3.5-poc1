@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:proc="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="proc:processType" name="DatabasePluginSubProcess" workstream="false">
+  <com:displayName>DatabasePluginSubProcess</com:displayName>
+  <com:saveVersion>3</com:saveVersion>
+  <com:id>3l2AN6-2QFC6EM0CkrC0TQ</com:id>
+  <proc:orderType>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>orderRef</com:relationship>
+  </proc:orderType>
+  <proc:expectedDuration>P0Y0M0DT0H0M86400S</proc:expectedDuration>
+  <proc:startTask>Start1</proc:startTask>
+  <proc:activity id="Start1" name="Start">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>50.0</proc:Xcoordinate>
+      <proc:Ycoordinate>50.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task1" name="DatabasePluginInputTask">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>78.0</proc:Xcoordinate>
+      <proc:Ycoordinate>221.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>DatabasePluginInputTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task2" name="DatabasePluginOutputTask">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>529.0</proc:Xcoordinate>
+      <proc:Ycoordinate>223.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>DatabasePluginOutputTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task3" name="DatabasePluginExecutionTask">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>327.0</proc:Xcoordinate>
+      <proc:Ycoordinate>85.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>DatabasePluginExecutionTask</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="End4" name="End">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>577.0</proc:Xcoordinate>
+      <proc:Ycoordinate>58.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:transition id="Flow5" name="">
+    <proc:from>Start1</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow6" name="next">
+    <proc:from>Task1</proc:from>
+    <proc:to>Task3</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow7" name="failure">
+    <proc:from>Task3</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status>failure</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow8" name="success">
+    <proc:from>Task3</proc:from>
+    <proc:to>Task2</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow9" name="next">
+    <proc:from>Task2</proc:from>
+    <proc:to>End4</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow10" name="back">
+    <proc:from>Task2</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status>back</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+</com:modelEntity>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:manualTaskType" name="display_employee_names">
+  <com:displayName>Display Employee Names</com:displayName>
+  <com:information></com:information>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>Ag4PZsvAS6Go7afYGBxLmw</com:id>
+  <task:orderType>
+    <com:entity>database_plugin_demo_web</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.orderType</com:relationship>
+  </task:orderType>
+  <task:orderTemplateRef>
+    <com:entity>database_plugin_demo_web</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>ora.task.orderTemplateRef</com:relationship>
+    <com:element>/employee</com:element>
+    <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    <com:elementName>employee</com:elementName>
+    <task:childNode>
+      <com:entity>database_plugin_demo_web</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/employee/name</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+      <com:elementName>name</com:elementName>
+      <task:childRefNode>false</task:childRefNode>
+    </task:childNode>
+    <task:childRefNode>false</task:childRefNode>
+  </task:orderTemplateRef>
+  <task:viewNodeExtension>
+    <task:path>/employee</task:path>
+    <task:editable>false</task:editable>
+    <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>true</task:overrideMultiplicity>
+    <task:max>10</task:max>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/employee/name</task:path>
+    <task:editable>false</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:state name="accepted">
+    <task:displayName>Accepted</task:displayName>
+  </task:state>
+  <task:state name="completed">
+    <task:displayName>Completed</task:displayName>
+  </task:state>
+  <task:state name="received">
+    <task:displayName>Received</task:displayName>
+  </task:state>
+  <task:state name="assigned">
+    <task:displayName>Assigned</task:displayName>
+  </task:state>
+  <task:status name="next">
+    <task:annotation><com:documentation lang=""/></task:annotation>
+    <task:displayName>Next</task:displayName>
+    <task:allowableConstraintViolationSeverity>CRITICAL</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:abstract>false</task:abstract>
+  <task:final>false</task:final>
+  <task:expectedDuration>P0Y0M0DT0H0M86400S</task:expectedDuration>
+  <task:responsible>System</task:responsible>
+  <task:scheduleType>SYSTEM</task:scheduleType>
+  <task:workgroupPermission>
+    <com:entity>demo</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do</task:executionModes>
+  </task:workgroupPermission>
+  <task:compensationStrategy>
+    <task:onTaskReevaluate>redo</task:onTaskReevaluate>
+    <task:onTaskRollback>undo</task:onTaskRollback>
+  </task:compensationStrategy>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
+</com:modelEntity>

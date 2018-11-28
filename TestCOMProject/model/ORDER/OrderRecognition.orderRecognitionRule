@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderRecognitionRuleType" name="OrderRecognition">
+  <com:displayName>OrderRecognition</com:displayName>
+  <com:saveVersion>28</com:saveVersion>
+  <com:id>6PMFewphQieohTefI1IPgA</com:id>
+  <namespace>testComProject.com</namespace>
+  <inputMessage>
+    <com:entity>TestCOMProject</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderRecognitionRule.inputMessage</com:relationship>
+    <com:element>xmlOrderData</com:element>
+    <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+    <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/TestCOMProject/TestCOMProject</com:namespace>
+    <com:baseElement>(Reusable Structure)</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+  </inputMessage>
+  <targetOrder>
+    <com:entity>TestCOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderRecognitionRule.targetOrder</com:relationship>
+  </targetOrder>
+  <recognitionRule xsi:type="osm:XqueryExpressionRuleType">
+    <osm:xquery>fn:namespace-uri(.) = 'http://www.example.org/osm7Order1'</osm:xquery>
+  </recognitionRule>
+  <relevancy>5</relevancy>
+  <validationRule xsi:type="osm:XqueryExpressionRuleType">
+    <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+let $salesOrderXML := fn:root(.)//osm7dd:SalesOrder&#xD;
+return&#xD;
+(&#xD;
+	if (fn:exists($salesOrderXML/osm7dd:orderId) and  $salesOrderXML/osm7dd:orderId != '' ) then ()&#xD;
+	else&#xD;
+		concat(&quot;ERROR&quot;, ': ', &quot;SalesOrder should contain OrderID. &quot;, &quot;Level: Order Header &quot;, &quot;XPath : /osm7dd:SalesOrder/osm7dd:orderId&quot;),&#xD;
+	if (fn:exists($salesOrderXML/osm7dd:orderPriority) and  $salesOrderXML/osm7dd:orderPriority != '' ) then ()&#xD;
+	else&#xD;
+		concat(&quot;ERROR&quot;, ': ', &quot;SalesOrder should contain Order Priority. &quot;, &quot;Level: Order Header &quot;, &quot;XPath : /osm7dd:SalesOrder/osm7dd:orderPriority&quot;),&#xD;
+	for $orderLine at $linePosition in $salesOrderXML/osm7dd:OrderLine&#xD;
+        let $lineIdentification := $orderLine/osm7dd:lineID&#xD;
+        let $lineNum := if (fn:exists($lineIdentification)) then data($lineIdentification) else $linePosition&#xD;
+        return&#xD;
+		(&#xD;
+			if (fn:exists($lineIdentification)  and $lineIdentification != '') then ()&#xD;
+			else&#xD;
+				concat(&quot;ERROR&quot;, ': ', &quot;SalesOrderLine should contain OrderLineID. &quot;, &quot;Level: Order Line &quot;, $lineNum, &quot;. &quot;, &quot;XPath : /osm7dd:SalesOrder/osm7dd:OrderLine/osm7dd:lineID&quot;)&#xD;
+		)&#xD;
+)</osm:xquery>
+  </validationRule>
+  <orderDataRule xsi:type="osm:XqueryExpressionRuleType">
+    <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;;&#xD;
+&#xD;
+let $salesOrderXML := fn:root(.)//osm7dd:SalesOrder&#xD;
+let $OrderID := $salesOrderXML/osm7dd:orderId/text()&#xD;
+&#xD;
+return
+&#xD;
+&lt;_root>&#xD;
+	&lt;OrderID>{ $OrderID }
+&lt;/OrderID>&#xD;
+&lt;/_root></osm:xquery>
+  </orderDataRule>
+  <orderHeaderRules>
+    <priority xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;; &#xD;
+//osm7dd:SalesOrder/osm7dd:orderPriority/text()</osm:xquery>
+    </priority>
+    <reference xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm7dd=&quot;http://www.example.org/osm7Order1&quot;; &#xD;
+//osm7dd:SalesOrder/osm7dd:orderId/text()</osm:xquery>
+    </reference>
+  </orderHeaderRules>
+  <orderTemplateContribution>
+    <ord:nodeExtension>
+      <ord:path>/xmlOrderData</ord:path>
+      <ord:xmlType>true</ord:xmlType>
+    </ord:nodeExtension>
+    <ord:orderData>
+      <com:entity>TestCOMProject</com:entity>
+      <com:entityType>xsd</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+      <com:element>xmlOrderData</com:element>
+      <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+      <com:elementName>xmlOrderData</com:elementName>
+      <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/TestCOMProject/TestCOMProject</com:namespace>
+      <com:baseElement>(Reusable Structure)</com:baseElement>
+      <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    </ord:orderData>
+  </orderTemplateContribution>
+</com:modelEntity>

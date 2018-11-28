@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:proc="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="proc:processType" name="XSLTAutomationsSubProcess" workstream="false">
+  <com:displayName>XSLTAutomationsSubProcess</com:displayName>
+  <com:saveVersion>19</com:saveVersion>
+  <com:id>dJuPV1FZTdCQ3-ClfLJyrg</com:id>
+  <proc:orderType>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>orderRef</com:relationship>
+  </proc:orderType>
+  <proc:expectedDuration>P0Y0M0DT0H0M86400S</proc:expectedDuration>
+  <proc:startTask>Start1</proc:startTask>
+  <proc:activity id="Start1" name="Start">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>23.0</proc:Xcoordinate>
+      <proc:Ycoordinate>69.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task1" name="TestSOMXSLTManualTask1">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>173.0</proc:Xcoordinate>
+      <proc:Ycoordinate>50.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTManualTask1</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task2" name="TestSOMXSLTManualTask2">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>219.0</proc:Xcoordinate>
+      <proc:Ycoordinate>335.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTManualTask2</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task3" name="TestSOMXSLTManualTask3">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>535.0</proc:Xcoordinate>
+      <proc:Ycoordinate>624.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTManualTask3</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task4" name="TestSOMXSLTManualTask4">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>674.0</proc:Xcoordinate>
+      <proc:Ycoordinate>277.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTManualTask4</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task5" name="TestSOMXSLTManualTask5">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>964.0</proc:Xcoordinate>
+      <proc:Ycoordinate>80.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTManualTask5</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task7" name="TestSOMXSLTAutomationInternalAutomationTask1">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>441.0</proc:Xcoordinate>
+      <proc:Ycoordinate>49.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTAutomationInternalAutomationTask1</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task8" name="TestSOMXSLTAutomationReceiverOnlyJMSCorrIDTask1">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>975.0</proc:Xcoordinate>
+      <proc:Ycoordinate>270.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTAutomationReceiverOnlyJMSCorrIDTask1</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task9" name="TestSOMXSLTAutomationSenderOnlyJMSCorrIDTask1">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>877.0</proc:Xcoordinate>
+      <proc:Ycoordinate>623.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTAutomationSenderOnlyJMSCorrIDTask1</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="Task10" name="TestSOMXSLTAutomationSenderReceiverJMSCorrIDTask1">
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>60.0</proc:Xcoordinate>
+      <proc:Ycoordinate>616.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>TestSOMXSLTAutomationSenderReceiverJMSCorrIDTask1</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="End31" name="End">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>714.0</proc:Xcoordinate>
+      <proc:Ycoordinate>87.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:transition id="Flow11" name="">
+    <proc:from>Start1</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status></proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow12" name="next">
+    <proc:from>Task1</proc:from>
+    <proc:to>Task7</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow13" name="success">
+    <proc:from>Task7</proc:from>
+    <proc:to>Task2</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow14" name="failure">
+    <proc:from>Task7</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status>failure</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow15" name="next">
+    <proc:from>Task2</proc:from>
+    <proc:to>Task10</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow16" name="back">
+    <proc:from>Task2</proc:from>
+    <proc:to>Task1</proc:to>
+    <proc:status>back</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow17" name="success">
+    <proc:from>Task10</proc:from>
+    <proc:to>Task3</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow18" name="failure">
+    <proc:from>Task10</proc:from>
+    <proc:to>Task2</proc:to>
+    <proc:status>failure</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow20" name="back">
+    <proc:from>Task3</proc:from>
+    <proc:to>Task2</proc:to>
+    <proc:status>back</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow23" name="back">
+    <proc:from>Task4</proc:from>
+    <proc:to>Task3</proc:to>
+    <proc:status>back</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow25" name="success">
+    <proc:from>Task9</proc:from>
+    <proc:to>Task4</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow26" name="failure">
+    <proc:from>Task9</proc:from>
+    <proc:to>Task3</proc:to>
+    <proc:status>failure</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow27" name="next">
+    <proc:from>Task3</proc:from>
+    <proc:to>Task9</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow28" name="next">
+    <proc:from>Task4</proc:from>
+    <proc:to>Task8</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow29" name="success">
+    <proc:from>Task8</proc:from>
+    <proc:to>Task5</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow30" name="failure">
+    <proc:from>Task8</proc:from>
+    <proc:to>Task4</proc:to>
+    <proc:status>failure</proc:status>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow32" name="next">
+    <proc:from>Task5</proc:from>
+    <proc:to>End31</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+</com:modelEntity>

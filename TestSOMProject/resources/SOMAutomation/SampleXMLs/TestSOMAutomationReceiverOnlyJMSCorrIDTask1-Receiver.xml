@@ -1,0 +1,7 @@
+<provordResp:ResponseMessage xmlns:provordResp="http://xmlns.oracle.com/EnterpriseObjects/Core/provord/ProvisioningOrder/V1/resp">
+	<provordResp:ResponseXML>
+		<provordResp:status>SUCCESS</provordResp:status>
+		<provordResp:data1>Updated by external system in separate sender receiver</provordResp:data1>
+		<provordResp:data2>12312312</provordResp:data2>
+	</provordResp:ResponseXML>
+</provordResp:ResponseMessage>

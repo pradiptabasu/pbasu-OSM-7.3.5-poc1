@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:automatedTaskType" name="get_employee_names">
+  <com:displayName>Get Employee Names</com:displayName>
+  <com:information></com:information>
+  <com:saveVersion>7</com:saveVersion>
+  <com:id>tJiYxOKmSpOfBXgaR7IUEg</com:id>
+  <task:orderType>
+    <com:entity>database_plugin_demo_web</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.orderType</com:relationship>
+  </task:orderType>
+  <task:orderTemplateRef>
+    <com:entity>database_plugin_demo_web</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>ora.task.orderTemplateRef</com:relationship>
+    <com:element>/employee</com:element>
+    <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    <com:elementName>employee</com:elementName>
+    <task:childNode>
+      <com:entity>database_plugin_demo_web</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/employee/name</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+      <com:elementName>name</com:elementName>
+      <task:childRefNode>false</task:childRefNode>
+    </task:childNode>
+    <task:childRefNode>false</task:childRefNode>
+  </task:orderTemplateRef>
+  <task:viewNodeExtension>
+    <task:path>/employee</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>true</task:overrideMultiplicity>
+    <task:max>10</task:max>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/employee/name</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:state name="accepted">
+    <task:displayName>Accepted</task:displayName>
+  </task:state>
+  <task:state name="completed">
+    <task:displayName>Completed</task:displayName>
+  </task:state>
+  <task:state name="received">
+    <task:displayName>Received</task:displayName>
+  </task:state>
+  <task:status name="success">
+    <task:annotation><com:documentation lang=""/></task:annotation>
+    <task:displayName>Success</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="automation_exception">
+    <task:annotation><com:documentation lang=""/></task:annotation>
+    <task:displayName>Automation Exception</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:abstract>false</task:abstract>
+  <task:final>false</task:final>
+  <task:expectedDuration>P0Y0M0DT0H0M86400S</task:expectedDuration>
+  <task:responsible>System</task:responsible>
+  <task:scheduleType>SYSTEM</task:scheduleType>
+  <task:workgroupPermission>
+    <com:entity>demo</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do</task:executionModes>
+  </task:workgroupPermission>
+  <task:compensationStrategy>
+    <task:onTaskReevaluate>redo</task:onTaskReevaluate>
+    <task:onTaskRollback>undo</task:onTaskRollback>
+  </task:compensationStrategy>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
+  <task:automationComponent xsi:type="task:internalAutomationPlugin">
+    <prov:name>GetNamesEJB</prov:name>
+    <prov:type>DatabasePlugin</prov:type>
+    <prov:pluginJndiName>GetNames</prov:pluginJndiName>
+    <prov:ejbName>GetNamesEJB</prov:ejbName>
+    <prov:runAs>demo</prov:runAs>
+    <prov:implementation xsi:type="aut:defaultImplementationType">
+      <aut:xmlContent>&lt;implement xmlns=&quot;http://www.metasolv.com/OMS/AutomationMap/2001/11/23&quot; xmlns:db=&quot;http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.metasolv.com/OMS/AutomationMap/2001/11/23 ./automationMap.xsd http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd&quot; xsi:type=&quot;db:DatabasePlugin&quot;>&#xD;
+			&lt;db:configLocation>&#xD;
+				&lt;db:resource>getEmployees.xml&lt;/db:resource>&#xD;
+			&lt;/db:configLocation>&#xD;
+			&lt;db:completionStatus>success&lt;/db:completionStatus>&#xD;
+		&lt;/implement>&#xD;
+</aut:xmlContent>
+    </prov:implementation>
+    <prov:documentationType></prov:documentationType>
+    <task:compensationType>do</task:compensationType>
+  </task:automationComponent>
+</com:modelEntity>

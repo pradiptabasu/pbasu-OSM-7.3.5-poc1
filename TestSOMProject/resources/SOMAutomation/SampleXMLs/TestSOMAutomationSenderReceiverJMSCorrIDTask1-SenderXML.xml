@@ -1,0 +1,75 @@
+<soapenv:Envelope xmlns="http://www.metasolv.com/OMS/OrderDataUpdate"
+	xmlns:automator="java:oracle.communications.ordermanagement.automation.plugin.ScriptSenderContextInvocation"
+	xmlns:context="java:com.mslv.oms.automation.TaskContext" xmlns:fn="http://www.w3.org/2005/02/xpath-functions"
+	xmlns:log="java:oracle.communications.ordermanagement.log.LogOrderActivity"
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement"
+	xmlns:outboundMessage="java:javax.jms.TextMessage"
+	xmlns:provord="http://xmlns.oracle.com/EnterpriseObjects/Core/provord/ProvisioningOrder/V1"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:to="http://TechnicalOrder">
+	<soapenv:Header>
+		<wsse:Security soapenv:mustUnderstand="1"
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="UsernameToken-4799946"
+				xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+				<wsse:Username>demo</wsse:Username>
+				<wsse:Password
+					Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">passw0rd</wsse:Password>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ord:CreateOrder>
+			<provord:ProcessProvisioningOrderEBM>
+				<provord:DataArea>
+					<provord:Process
+						xmlns="http://xmlns.oracle.com/EnterpriseObjects/Core/provord/ProvisioningOrder/V1" />
+					<provord:ProcessProvisioningOrder
+						xmlns="http://xmlns.oracle.com/EnterpriseObjects/Core/provord/ProvisioningOrder/V1">
+						<provord:SalesOrderReference>
+							<provord:SalesOrderXML>
+								<_root index="0" xmlns="urn:com:metasolv:oms:xmlapi:1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+									<TestData1 index="1449653578060">dsadas</TestData1>
+									<TestData2 index="1449653578061">1231</TestData2>
+								</_root>
+							</provord:SalesOrderXML>
+							<provord:GetOrderResponse>
+								<GetOrder.Response xmlns="urn:com:metasolv:oms:xmlapi:1">
+									<OrderID>7</OrderID>
+									<OrderHistID>607</OrderHistID>
+									<Task>TestSOMAutomationTask1</Task>
+									<OrderSource>TestSOMOrder</OrderSource>
+									<OrderType>TestSOMOrder</OrderType>
+									<Workgroups>
+										<Workgroup>TestSOMRole1</Workgroup>
+									</Workgroups>
+									<OrderState>open.running.in_progress</OrderState>
+									<State>accepted</State>
+									<ExecutionMode>do</ExecutionMode>
+									<AcceptedUserName>oms-automation</AcceptedUserName>
+									<Reference>TestAuto3</Reference>
+									<ExpectedDuration>P1D</ExpectedDuration>
+									<ExpectedOrderCompletionDate>2015-12-10T15:02:58 IST
+									</ExpectedOrderCompletionDate>
+									<Priority>5</Priority>
+									<Namespace>TestSOMProject</Namespace>
+									<Version>1.0.0.0.0</Version>
+									<ProcessStatus>n/a</ProcessStatus>
+									<_root index="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+										<TestData1 index="1449653578060">dsadas</TestData1>
+										<TestData2 index="1449653578061">1231</TestData2>
+									</_root>
+								</GetOrder.Response>
+							</provord:GetOrderResponse>
+						</provord:SalesOrderReference>
+						<provord:CustomXML>
+							<provord:MySOMTestOrderID>7</provord:MySOMTestOrderID>
+							<provord:Field1 />
+							<provord:Field2 />
+						</provord:CustomXML>
+					</provord:ProcessProvisioningOrder>
+				</provord:DataArea>
+			</provord:ProcessProvisioningOrderEBM>
+		</ord:CreateOrder>
+	</soapenv:Body>
+</soapenv:Envelope>

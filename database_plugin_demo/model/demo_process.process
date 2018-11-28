@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:proc="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="proc:processType" name="demo_process" workstream="true">
+  <com:displayName>Demo Process</com:displayName>
+  <com:information></com:information>
+  <com:saveVersion>5</com:saveVersion>
+  <com:id>jgkb74dGQCyM0kZHoeOU8A</com:id>
+  <proc:orderType>
+    <com:entity>database_plugin_demo_web</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>orderRef</com:relationship>
+  </proc:orderType>
+  <proc:expectedDuration>P0Y0M0DT0H0M86400S</proc:expectedDuration>
+  <proc:startTask>Start1</proc:startTask>
+  <proc:activity id="Start1" name="Start">
+    <proc:diagramLocation>
+      <proc:Xcoordinate>50.0</proc:Xcoordinate>
+      <proc:Ycoordinate>150.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227811" name="display_employee_names_sp">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Display Employee Names</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>950.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1350.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>display_employee_names</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227812" name="get_second_employee_s_job_sp">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Get Second Employee's Job SP</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>1100.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1500.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>get_second_employee_s_job_sp</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227803" name="get_employee_names">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Get Employee Names</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>200.0</proc:Xcoordinate>
+      <proc:Ycoordinate>450.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>get_employee_names</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227814" name="display_employee_jobs2">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Display Employees Jobs</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>1250.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1800.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>display_employee_jobs</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227805" name="display_employee_names">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Display Employee Names</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>350.0</proc:Xcoordinate>
+      <proc:Ycoordinate>600.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>display_employee_names</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227806" name="get_third_employee_s_job">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Get Third Employee's Job</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>500.0</proc:Xcoordinate>
+      <proc:Ycoordinate>750.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>get_third_employee_s_job</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227809" name="get_employee_names__sp_">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Get Employee Names (SP)</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>800.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1200.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>get_employee_names__sp_</com:entity>
+      <com:entityType>automationTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:taskRef" id="1429010227807" name="display_employee_jobs">
+    <proc:annotation><com:documentation lang=""/></proc:annotation>
+    <proc:defaultDisplayName>Display Employees Jobs</proc:defaultDisplayName>
+    <proc:description> </proc:description>
+    <proc:inputType>ANY</proc:inputType>
+    <proc:processHistorySummary>true</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>650.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1050.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+    <proc:task>
+      <com:entity>display_employee_jobs</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>taskRef</com:relationship>
+    </proc:task>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="1429010227815" name="End">
+    <proc:defaultDisplayName>End</proc:defaultDisplayName>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>200.0</proc:Xcoordinate>
+      <proc:Ycoordinate>300.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:activity xsi:type="proc:endType" id="1429010227822" name="End">
+    <proc:defaultDisplayName>End</proc:defaultDisplayName>
+    <proc:processHistorySummary>false</proc:processHistorySummary>
+    <proc:diagramLocation>
+      <proc:Xcoordinate>1400.0</proc:Xcoordinate>
+      <proc:Ycoordinate>1950.0</proc:Ycoordinate>
+    </proc:diagramLocation>
+  </proc:activity>
+  <proc:transition xsi:type="proc:exceptionTransitionType" id="Exception1" name="cancel" restrictWorkgroup="false">
+    <proc:from>Start1</proc:from>
+    <proc:to>1429010227815</proc:to>
+    <proc:status>cancel</proc:status>
+    <proc:reportingStatus>all_subprocess_threads_complete</proc:reportingStatus>
+    <proc:mandatoryCheck>false</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow2">
+    <proc:from>Start1</proc:from>
+    <proc:to>1429010227803</proc:to>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow3" name="next">
+    <proc:from>1429010227805</proc:from>
+    <proc:to>1429010227806</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow6" name="success">
+    <proc:from>1429010227809</proc:from>
+    <proc:to>1429010227811</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow7" name="next">
+    <proc:from>1429010227811</proc:from>
+    <proc:to>1429010227812</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow12" name="success">
+    <proc:from>1429010227803</proc:from>
+    <proc:to>1429010227805</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow13" name="success">
+    <proc:from>1429010227806</proc:from>
+    <proc:to>1429010227807</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow16" name="next">
+    <proc:from>1429010227807</proc:from>
+    <proc:to>1429010227809</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow17" name="success">
+    <proc:from>1429010227812</proc:from>
+    <proc:to>1429010227814</proc:to>
+    <proc:status>success</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+  <proc:transition id="Flow21" name="next">
+    <proc:from>1429010227814</proc:from>
+    <proc:to>1429010227822</proc:to>
+    <proc:status>next</proc:status>
+    <proc:mandatoryCheck>true</proc:mandatoryCheck>
+  </proc:transition>
+</com:modelEntity>

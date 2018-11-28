@@ -1,0 +1,14 @@
+<provord:CustomXML xmlns="http://www.metasolv.com/OMS/OrderDataUpdate"
+	xmlns:automator="java:oracle.communications.ordermanagement.automation.plugin.ScriptSenderContextInvocation"
+	xmlns:context="java:com.mslv.oms.automation.TaskContext" xmlns:fn="http://www.w3.org/2005/02/xpath-functions"
+	xmlns:log="java:oracle.communications.ordermanagement.log.LogOrderActivity"
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement"
+	xmlns:outboundMessage="java:javax.jms.TextMessage"
+	xmlns:provord="http://xmlns.oracle.com/EnterpriseObjects/Core/provord/ProvisioningOrder/V1"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<provord:MySOMTestOrderID>16</provord:MySOMTestOrderID>
+	<provord:Field1>Updated by external system</provord:Field1>
+	<provord:Field2>12312312</provord:Field2>
+	<provord:TaskName>UpdatedByTestSOMAutomationSenderReceiverJMSCorrIDTask1</provord:TaskName>
+	<provord:Status>SUCCESS</provord:Status>
+</provord:CustomXML>

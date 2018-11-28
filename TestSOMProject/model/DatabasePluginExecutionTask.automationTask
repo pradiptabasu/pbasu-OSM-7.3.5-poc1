@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:automatedTaskType" name="DatabasePluginExecutionTask">
+  <com:displayName>DatabasePluginExecutionTask</com:displayName>
+  <com:saveVersion>12</com:saveVersion>
+  <com:id>t0XVtHgfTpaeqfXLeaeoQg</com:id>
+  <task:orderType>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.orderType</com:relationship>
+  </task:orderType>
+  <task:orderTemplateRef>
+    <com:entity>TestSOMOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>ora.task.orderTemplateRef</com:relationship>
+    <com:element>/Employee</com:element>
+    <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    <task:childNode>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/Employee/empid</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
+    <task:childNode>
+      <com:entity>TestSOMOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/Employee/empname</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
+  </task:orderTemplateRef>
+  <task:viewNodeExtension>
+    <task:path>/Employee</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>false</task:overrideMultiplicity>
+    <task:max>-1</task:max>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/Employee/empid</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>false</task:overrideMultiplicity>
+    <task:min>0</task:min>
+    <task:max>-1</task:max>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/Employee/empname</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>false</task:overrideMultiplicity>
+    <task:min>0</task:min>
+    <task:max>-1</task:max>
+  </task:viewNodeExtension>
+  <task:state name="accepted">
+    <task:displayName>Accepted</task:displayName>
+  </task:state>
+  <task:state name="completed">
+    <task:displayName>Completed</task:displayName>
+  </task:state>
+  <task:state name="received">
+    <task:displayName>Received</task:displayName>
+  </task:state>
+  <task:status name="success">
+    <task:displayName>Success</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="failure">
+    <task:displayName>Failure</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:abstract>false</task:abstract>
+  <task:final>false</task:final>
+  <task:expectedDuration>P0Y0M0DT0H0M86400S</task:expectedDuration>
+  <task:responsible>System</task:responsible>
+  <task:scheduleType>SYSTEM</task:scheduleType>
+  <task:workgroupPermission>
+    <com:entity>TestSOMRole1</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do redo undo</task:executionModes>
+  </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
+  <task:automationComponent xsi:type="task:internalAutomationPlugin">
+    <prov:name>DatabasePluginSelectAutomation</prov:name>
+    <prov:type>DatabasePluginSelect</prov:type>
+    <prov:ejbName>DatabasePluginExecutionTask.automatedtask.testsomproject.DatabasePluginSelectAutomation</prov:ejbName>
+    <prov:runAs>%{DEFAULT_AUTOMATION_USER}</prov:runAs>
+    <prov:implementation xsi:type="aut:defaultImplementationType">
+      <aut:xmlContent>&lt;implement xmlns=&quot;http://www.metasolv.com/OMS/AutomationMap/2001/11/23&quot; xmlns:db=&quot;http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.metasolv.com/OMS/AutomationMap/2001/11/23 ./automationMap.xsd http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd&quot; xsi:type=&quot;db:DatabasePlugin&quot;>&#xD;
+	&lt;db:configLocation>&#xD;
+		&lt;db:resource>customDatabasePlugin/DatabasePluginSelect.xml&lt;/db:resource>&#xD;
+	&lt;/db:configLocation>&#xD;
+	&lt;db:completionStatus>success&lt;/db:completionStatus>&#xD;
+&lt;/implement></aut:xmlContent>
+    </prov:implementation>
+    <prov:failTaskOnException>false</prov:failTaskOnException>
+    <task:compensationType>do</task:compensationType>
+  </task:automationComponent>
+  <task:useNamespace>false</task:useNamespace>
+</com:modelEntity>

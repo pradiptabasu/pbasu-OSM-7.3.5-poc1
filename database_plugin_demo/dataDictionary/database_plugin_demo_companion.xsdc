@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xsi:type="dataDictionaryCompanionType" name="database_plugin_demo_companion">
+  <displayName>database_plugin_demo</displayName>
+  <saveVersion>3</saveVersion>
+  <id>wDYBHwhjREmEMgrjNg0b3w</id>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>text_field_ddBaseType</element>
+    <elementType>anyType</elementType>
+    <baseElement>string</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>text_field_ddBaseType</dataElementId>
+    <displayName>Text Field</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+      <provisioning:maxLength>30</provisioning:maxLength>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>hh2CjhEXSMa+5BH+uhNfXw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>text_field_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>DwW4k4EjQ3KdInCaS4b60Q</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>text_field_ddBaseType</data:dataElementId>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>2pXXDkkNR3i5sqh-c8OT2A</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>text_field_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>name_ddBaseType</element>
+    <elementType>anyType</elementType>
+    <baseElement>string</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>name_ddBaseType</dataElementId>
+    <displayName>Name</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+      <provisioning:maxLength>30</provisioning:maxLength>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>bJUO-pbDSq2oaRCU1pDUNQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>name_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>tSakBVLBQwiI9xSj6AKUcw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>name_ddBaseType</data:dataElementId>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>du46NWS0Qyyb90eylE5LXg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>name_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>data_ddBaseType</element>
+    <elementType>data_ddBaseType</elementType>
+    <baseElement>(Reusable Structure)</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>data_ddBaseType</dataElementId>
+    <displayName>Data</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>femTU7A7Q-GtLkqchn850w</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>data_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>0G33KObRQWes+3GFzBtoqw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>data_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>job_ddBaseType</element>
+    <elementType>anyType</elementType>
+    <baseElement>string</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>job_ddBaseType</dataElementId>
+    <displayName>Job</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+      <provisioning:maxLength>30</provisioning:maxLength>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>cr6JWL75S4as2JzddCDxCQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>job_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>Wy2GBPVTQ+6dHPfHh6uZtA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>job_ddBaseType</data:dataElementId>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>Cc4YhUg4Tb2hrzH6GgSCcQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>job_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>number_ddBaseType</element>
+    <elementType>anyType</elementType>
+    <baseElement>decimal</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>number_ddBaseType</dataElementId>
+    <displayName>Number</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+      <provisioning:maxLength>10</provisioning:maxLength>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>anVw982RR6OLuFlLiVRtFw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>number_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>Hg+YVDlKSfGcnQvqkFNePA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>number_ddBaseType</data:dataElementId>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>dQJZW6v7QZaFkjGsbm8HfQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>number_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>boolean_ddBaseType</element>
+    <elementType>anyType</elementType>
+    <baseElement>boolean</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>boolean_ddBaseType</dataElementId>
+    <displayName>Boolean</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>PINpwRbeQxm-lzVbnhbWhQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>boolean_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>C+yEyK9ySravcgF2fdT3aQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>boolean_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>notice_ddBaseType</element>
+    <elementType>notice_ddBaseType</elementType>
+    <baseElement>(Reusable Structure)</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>notice_ddBaseType</dataElementId>
+    <displayName>NOTICE</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>musHMloBSQKX1QHr7yAQaw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>notice_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>A75TKa4LRPWWefRDczXFYQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>notice_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>employee_ddBaseType</element>
+    <elementType>employee_ddBaseType</elementType>
+    <baseElement>(Reusable Structure)</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>employee_ddBaseType</dataElementId>
+    <displayName>Employee</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>ccdlrXZCRzKH-5GZKZOXkQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>employee_ddBaseType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>u55Pp5TyTl6SNpASm9jbQg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>employee_ddBaseType</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>employee</element>
+    <elementType>employee</elementType>
+    <baseElement>employee_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>employee</dataElementId>
+    <displayName>Employee</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <minCardinality>0</minCardinality>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>qvBS7sUhR-6uSD8EjU+dSA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>employee</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>employee/name</element>
+    <elementType>tns:name_ddBaseType</elementType>
+    <baseElement>name_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>employee/name</dataElementId>
+    <displayName>Name</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>FssQhVonSyCLJUwXsVI3XQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>employee/name</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>n6SD-iQ3RJuVrEapYc0+Lg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>employee/name</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>employee/job</element>
+    <elementType>tns:job_ddBaseType</elementType>
+    <baseElement>job_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>employee/job</dataElementId>
+    <displayName>Job</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>DWzz5uFeSciUhw74JqaBiA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>employee/job</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>zn9-RiHOR4Ou7hKQic1KJQ</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>employee/job</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>notice</element>
+    <elementType>notice</elementType>
+    <baseElement>notice_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>notice</dataElementId>
+    <displayName>NOTICE</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <minCardinality>0</minCardinality>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>h0ASoXaEQKezQHjtkkcL4g</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>notice</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>data</element>
+    <elementType>data</elementType>
+    <baseElement>data_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>data</dataElementId>
+    <displayName>Data</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <minCardinality>0</minCardinality>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>0-cBCKWFRQifkKsvLOyXnw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>data</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>data/boolean</element>
+    <elementType>tns:boolean_ddBaseType</elementType>
+    <baseElement>boolean_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>data/boolean</dataElementId>
+    <displayName>Boolean</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>RhvijJ3rSvSIy0Quaa7FPg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>data/boolean</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>data/number</element>
+    <elementType>tns:number_ddBaseType</elementType>
+    <baseElement>number_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>data/number</dataElementId>
+    <displayName>Number</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>NIezGMafQBi6QlpkwfTDEw</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>data/number</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>T1FsJ-RVTNOLRVIXEtdQeg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>data/number</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>database_plugin_demo</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>data/text_field</element>
+    <elementType>tns:text_field_ddBaseType</elementType>
+    <baseElement>text_field_ddBaseType</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/database_plugin_demo/database_plugin_demo</baseNamespace>
+    <dataElementId>data/text_field</dataElementId>
+    <displayName>Text Field</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>1jESBcQ+S42Y4-0CVYAxog</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>data/text_field</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:maxLength>30</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>UyCgl1U7QsiV37ygpmka+g</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>data/text_field</data:dataElementId>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+</modelEntity>

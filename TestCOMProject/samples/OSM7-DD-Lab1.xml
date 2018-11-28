@@ -1,0 +1,19 @@
+<ord:CreateOrderBySpecification
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<ord:Specification>
+		<ord:Cartridge>
+			<ord:Name>TestCOMProject</ord:Name>
+			<ord:Version>1.0.0</ord:Version>
+		</ord:Cartridge>
+		<ord:Type>TestCOMProject</ord:Type>
+		<ord:Source>TestCOMProject</ord:Source>
+	</ord:Specification>
+	<ord:Reference>LAB-1</ord:Reference>
+	<ord:Priority>5</ord:Priority>
+	<ord:StartOrder>true</ord:StartOrder>
+	<Data>
+		<_root>
+			<OrderID>orderId-101</OrderID>
+		</_root>
+	</Data>
+</ord:CreateOrderBySpecification>

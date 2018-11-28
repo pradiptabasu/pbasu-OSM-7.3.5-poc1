@@ -1,0 +1,14 @@
+<implementation xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28 ./databasePlugin.xsd">
+	<transaction isolationLevel="READ_COMMITTED" scrollType="SCROLL_INSENSITIVE">
+		<dataSource>jdbc/testDataSource</dataSource>
+		<update timeout="30">
+			<call>{call dbplugin_pkg.get_job(?,?)}</call>
+			<bindPath id="emp" path="/employee[2]"/>
+			<parameter xsi:type="ProvisioningParameterType" bindPathRef="emp" path="name" type="text" mode="in"/>
+			<parameter xsi:type="ProvisioningParameterType" bindPathRef="emp" path="job" type="text" mode="out"/>
+			<resultSet appliesTo="1" appliesToRow="all">
+				<column number="1" bindPathRef="emp" path="job" updateOnMatch="true"/>
+			</resultSet>
+		</update>
+	</transaction>
+</implementation>

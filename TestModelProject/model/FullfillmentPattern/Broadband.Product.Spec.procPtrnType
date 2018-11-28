@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:dom="http://xmlns.oracle.com/communications/sce/model/common/entity" xsi:type="dom:ProcessingPatternType" name="Broadband.Product.Spec">
+  <displayName lang="[default]">Broadband.Product.Spec</displayName>
+  <saveVersion>4</saveVersion>
+  <id>D9Ea2lSiQe6rUC7zOJP8Lw</id>
+  <dom:classification>
+    <id>BeUh6UlIRKmEVVxUUyPwsQ</id>
+    <elementType>oracle.communications.sce.common.entity.entities.solution.pattern.processingpatternclassification</elementType>
+    <dom:functionalAreas>
+      <entity>Service</entity>
+      <entityType>funcArea</entityType>
+      <relationship>oracle.communications.sce.common.entity.entities.solution.pattern.processingpatternclassification.FunctionalAreaRef</relationship>
+    </dom:functionalAreas>
+  </dom:classification>
+  <dom:realization>
+    <id>56EeUFo8RpilAe7s-Z2SeA</id>
+    <elementType>oracle.communications.sce.common.entity.entities.solution.pattern.processingpatternrealization</elementType>
+    <dom:processingPatternSystemType>EXTERNAL_SERVICE</dom:processingPatternSystemType>
+    <dom:processingPatternRealizationType>FULFILLMENT_PATTERN</dom:processingPatternRealizationType>
+    <dom:patternRealizationDesignPattern xsi:nil="true"/>
+  </dom:realization>
+</modelEntity>
